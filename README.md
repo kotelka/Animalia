@@ -1,4 +1,4 @@
-# Animalia
+# Animalia ᓚᘏᗢ
 Projekt z przedmiotu WWW i języki skryptowe - gra RPG liniowa: Animalia
 
 Zrzuty ekranu:
