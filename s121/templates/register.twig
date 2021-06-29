@@ -1,0 +1,34 @@
+{% extends "index.twig" %}
+{% block content %}
+    {% if not id is  defined %}
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-8" id="content">
+                <!-- Content -->
+                <div class="card" id="login-div">
+                <img class="img-fluid" src="res/register.png">
+                    {{ communicate|raw }}
+                    <form action="/register" method="POST" class="box">
+                        <p class="text-muted"> Wprowadź wszystkie niezbędne dane!</p>
+                        <input type="text" name="email" placeholder="Email" required>
+                        <br>
+                        <input type="text" name="login" placeholder="Nazwa użytkownika" required>
+                        <br>
+                        <input type="password" name="pw" placeholder="Hasło" required>
+                        <br>
+                        <input type="password" name="pwr" placeholder="Powtórz hasło" required>
+                        <br>
+                        <input class="form-check-input" type="checkbox" name="checkbox" value="" id="flexCheckDefault" required>
+                        <label class="form-check-label" for="flexCheckDefault">
+                            Oświadczam, że zapoznałem/am się z <a href="https://shorturl.at/wBCV7"> warunkami serwisu Animalia</a> i akceptuję je.
+                        </label>
+                        <div class="g-recaptcha" data-sitekey="{{recaptcha_public}}"></div>
+                        </br>
+                        <input type="submit" name="" value="Zarejestruj się!" href="#" id="login-button">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+{% endblock %}

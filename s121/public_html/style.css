@@ -1,0 +1,73 @@
+*{
+	margin:0;
+	padding:0;
+	font-family: "Akaya kanadaka", sans-serif;
+}
+.header
+{
+	height: 100vh;
+	
+}
+.body{
+	background-color: #3e3546;
+	height: 100%;
+}
+.navbar-style
+{
+	box-shadow: 0 5px 10px black;
+	text-transform: uppercase;
+	background-color: #3e3546;
+}
+.logo
+{
+	height: 48px;
+	padding: 2px 10px;
+}
+.icon-bar
+{
+	background: #7f708a;
+}
+li a
+{
+	color: #7f708a;
+	font-size: 20px;
+}
+.big-text
+{
+	font-size: 52px;
+	margin: 20px 0;
+	color: darkorange;
+	
+}
+a.btn
+{
+	margin: 30px 10px;
+	width: 200px;
+	padding: 10px;
+	border-radius: 20px;
+}
+a.btn-first
+{
+	background-color: darkorange;
+	color: #fff;
+}
+a.btn-second
+{
+	background: transparent;
+	border: 1px solid darkorange;
+	color: black;
+}
+a.btn:hover{
+	background: darkorange;
+	border: none;
+	color: #fff;
+	box-shadow: 5px 5px 10px #999;
+	transition: 0.3s;
+}
+.banner-info, .banner-image{
+	margin: 30px 0
+}
+
+.footer-mt-auto{
+	background-color: #7f708a;
+}

@@ -1,0 +1,25 @@
+{% extends "index.twig" %}
+{% block content %}
+    {% if not id is  defined %}
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-8" id="content">
+                <!-- Content -->
+                <div class="card" id="login-div">
+                <img class="img-fluid" src="res/login.png">
+
+                    <form action="/main" method="POST" class="box">
+                        <p class="text-muted">Wprowadź login i hasło!</p>
+                        <input type="text" name="loginl" placeholder="Nazwa użytkownika">
+                        <br/>
+                        <input type="password" name="psw" placeholder="Hasło">
+                        <br>
+                        <input type="submit" name="" value="Zaloguj się!" href="#" id="login-button">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+
+{% endblock %}

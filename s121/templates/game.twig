@@ -1,0 +1,162 @@
+{% extends "index.twig" %}
+
+{% block content %}
+    {% if id is defined %}
+        {% if level == 0 %}
+            <div class="container button-center">
+                <button id="start" class="btn" onclick="startIntro()">Start</button>
+                <div onclick="next()" style="display:none" id="dialogue-box-1" >
+                    <div class="name-div">
+                        ???
+                    </div>
+                    <div class="dialogue-div">
+                        Hej ty, w końcu się obudziłeś!
+                    </div>
+                </div>
+                <div onclick="next()" style="display:none" id="dialogue-box-2">
+                    <div class="name-div">
+                        {{ username }}
+                    </div>
+                    <div class="dialogue-div">
+                        Miau?
+                    </div>
+                </div>
+                <div onclick="next()" style="display:none" id="dialogue-box-3">
+                    <div class="name-div">
+                        ???
+                    </div>
+                    <div class="dialogue-div">
+                        Porządnie oberwałeś ale nie martw się szybko dojdziesz do siebie.
+                    </div>
+                </div>
+                <div onclick="next()" style="display:none" id="dialogue-box-4">
+                    <div class="name-div">
+                        {{ username }}
+                    </div>
+                    <div class="dialogue-div">
+                        Miau!
+                    </div>
+                </div>
+                <div onclick="next()" style="display:none" id="dialogue-box-5">
+                    <div class="name-div">
+                        ???
+                    </div>
+                    <div class="dialogue-div">
+                        Ty przeciwko całej armi psów? Nie rozśmieszaj mnie! Taki mały kociak jak ty nic nie jest w stanie zrobić.
+                    </div>
+                </div>
+                <div onclick="next()" style="display:none" id="dialogue-box-6">
+                    <div class="name-div">
+                        {{ username }}
+                    </div>
+                    <div class="dialogue-div">
+                        Miau!
+                    </div>
+                </div>
+                <div onclick="next()" style="display:none" id="dialogue-box-7">
+                    <div class="name-div">
+                        ???
+                    </div>
+                    <div class="dialogue-div">
+                        Ha widzę ześ uparty, a na to nic nie poradzę.
+                        Ale pamiętaj że przed wyruszeniem w drogę należy zebrać drużynę.
+                    </div>
+                </div>
+                <div onclick="next()" style="display:none" id="dialogue-box-8">
+                    <div class="name-div">
+                        {{ username }}
+                    </div>
+                    <div class="dialogue-div">
+                        Miau?
+                    </div>
+                </div>
+                <div onclick="next()" style="display:none" id="dialogue-box-9">
+                    <div class="name-div">
+                        ???
+                    </div>
+                    <div class="dialogue-div">
+                        A no tak jesteś tutaj sam...
+                        Niebezpiecznie jest iść samemu więc weź to. ~Otrzymujesz start miecz~
+                    </div>
+                </div>
+                <div onclick="next()" style="display:none" id="dialogue-box-10">
+                    <div class="name-div">
+                        {{ username }}
+                    </div>
+                    <div class="dialogue-div">
+                        Miau?
+                    </div>
+                </div>
+                <div onclick="next()" style="display:none" id="dialogue-box-11">
+                    <div class="name-div">
+                        ???
+                    </div>
+                    <div class="dialogue-div">
+                        Nie martw się, po prostu zaglądnij do mojego sklepu i coś kup za znalezione podczas ekploracji pięniądze.
+                        I radzę ci się dozbroić zanim udasz się na jednego z wyżej postawionych w armi psów.
+                    </div>
+                </div>
+                <div onclick="next()" style="display:none" id="dialogue-box-12">
+                    <div class="name-div">
+                        {{ username }}
+                    </div>
+                    <div class="dialogue-div">
+                        Miau!
+                    </div>
+                </div>
+                <div onclick="next()" style="display:none" id="dialogue-box-13">
+                    <div class="name-div">
+                        ???
+                    </div>
+                    <div class="dialogue-div">
+                        Tak, tak do rychłego zobaczenia.
+                    </div>
+                </div>
+            </div>
+
+        {% else %}
+            <div class="container button-center">
+                <button id="start" class="btn" onclick="start()">Start</button>
+
+            </div>
+        {% endif %}
+    <div class="container" id="game" style="display:none">
+        <div id="game_text">Witaj ziomek, gra sie robi, usiadz pod palmą i napij sie czegos kokosa moze ananasana komary nie gryzą</div>
+        <div id="main_buttons" class="btn-grid" >
+            <button id="explore" class="btn" onclick="explore()">Explore</button>
+            <button id=shop" class="btn" onclick="shop()">Shop</button>
+            <button id="boss" class="btn" onclick="boss()">BOSS</button>
+        </div>
+        <div id="fight_buttons" class="btn-grid" style="display:none">
+            <button id="attack"  class="btn" onclick="attack()">Attack</button>
+            <button id="potion"  class="btn" onclick="potion()">Potions</button>
+            <button id="run"  class="btn" onclick="run()">Run</button>
+        </div>
+        <div id="potion_buttons" class="btn-grid" style="display:none">
+            <button id="weak_potion"  class="btn" onclick="use_weak_potion()">Drink small  health potion</button>
+            <button id="strong_potion"  class="btn" onclick="use_strong_potion()">Drink big health potion</button>
+            <button id="return"  class="btn" onclick="return_to_fight()">Return to fight</button>
+        </div>
+        <div id="shop" class="btn-grid" style="display:none">
+            <button id="weapon1"  class="btn" onclick="buy_weapon1()"><img src="res/klebek.png"> Kłębek: att x2 - 2000 gil</button>
+            <button id="weapon2"  class="btn" onclick="buy_weapon2()"><img src="res/osc.png"> Ość niezgody: att x3 - 4000 gil</button>
+            <button id="shield1"  class="btn" onclick="buy_shield1()"><img src="res/karton.png"> Karton: hp x2 - 3000 gil</button>
+            <button id="shield2"  class="btn" onclick="buy_shield2()"><img src="res/kotara.png"> Kotara pomruku: hp x3 - 8000 gil</button>
+            <button id="potion1"  class="btn" onclick="buy_potion1()"><img src="res/hp1.png">Kocimiętka (słaby): +100hp - 100gil</button>
+            <button id="potion2"  class="btn" onclick="buy_potion2()"><img src="res/hp2.png">Kocimiętka (silny): +600hp - 400gil</button>
+            <button id="return2"  class="btn" onclick="return2()">Return</button>
+        </div>
+    </div>
+
+        <div class="js-user-data" data-user-data="{{ user }}">
+            <!-- ... -->
+        </div>
+
+
+    <script defer src="game.js"></script>
+    {% else %}
+        <h1>Won się zalogować hołoto!</h1>
+
+    {% endif %}
+
+{% endblock content %}

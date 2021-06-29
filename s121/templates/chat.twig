@@ -1,0 +1,80 @@
+{% extends "index.twig" %}
+{% block content %}
+    {% if id is defined %}
+    <div class="ChatMessages" id="messages">
+        {% for message in chat %}
+            {% if username == message['user'] %}
+                <li id='{{ message['id'] }}' class='msg user-msg'><b>{{ message['user'] }}:</b> {{ message['message'] }}</li>
+            {% else %}
+            <li id='{{ message['id'] }}' class='msg'><b>{{ message['user'] }}:</b> {{ message['message'] }}</li>
+            {% endif %}
+        {% endfor %}
+
+    </div>
+    <form action="/chat" method="POST" style="display: flex" >
+
+        <input type=text" id="message" name="message" autocomplete="off" autofocus placeholder="Wpisz wiadomość...">
+
+        <input type="submit" value="Wyślij" id="message_send">
+    </form>
+    {% else %}
+        <h1>Won się zalogować hołoto!</h1>
+
+    {% endif %}
+
+    <script>
+
+
+        $().ready(function() {
+            var objDiv = document.getElementById("messages");
+            objDiv.scrollTop = objDiv.scrollHeight;
+            var array;
+            function getMessages() {
+                $.get('https://s121.labagh.pl/GetMessages.php', function(data){
+                    var amountMsg = $("#messages li:last-child").attr('id');
+                    $(".messages").html(data);
+                    var countMsg = data.split('<li').length - 1;
+                    var message;
+                    message = data.split("\n").slice(amountMsg );
+                    array = [countMsg, amountMsg, message];
+                });
+                //console.log(array);
+                return array;
+            }
+
+            setInterval(function(){
+                num = getMessages();
+
+                //console.log(num);
+                //console.log(num[1]);
+                if(num[0] > num[1]) {
+                    //$(".messages").scrollTop($(".messages")[0].scrollHeight);
+
+                    //$.get('https://s121.labagh.pl/GetMessages.php', function(data){
+                    //    message = data.split("\n").slice(num[1]);
+                    //    console.log(message);
+                    //    for(var line in message){
+                    //        $("#messages").append(message[line]);
+                    //    }
+                    //});
+                    var message = num[2];
+                    for(var line in message){
+                        $("#messages").append(message[line]);
+                    }
+                    //console.log(message);
+                    var objDiv = document.getElementById("messages");
+                    objDiv.scrollTop = objDiv.scrollHeight;
+
+
+                }
+            },500);
+
+        });
+
+
+    </script>
+
+{% endblock %}
+
+
+

@@ -1,0 +1,13 @@
+> przycisk wyloguj jest brzydki as fuck :C
+
+> po zalogowaniu zamiast logowanie i rejestracja mamy przyciski mój profil i wyloguj
+
+> niezalogowany użytkownik po kliknięciu w profil aktywnego użytkownika dostanie alert, że aby wykonać tą akcję należy się zalogować
+> na mobilnym jeszcze stopka jest w połowie strony, może być poprawione na koniec - jeśli nie chce współpracować to nie ma prawa istnieć~Maciek
+
+Done:
+> wyśrodkować wszystko w loginie bo wygląda źle done-Maciek
+> odsunąć kartę od głównego contentu done-Maciek
+> zmienić navbar on hover kolor, bo wygląda źle taki biały + kolor logowania i rejestracji na kolor navbar done-Maciek
+> zmienić tło stronki na #2e222f bo coś nie działa albo chyba jednak działa? -imo działa :V Maciek
+> na mobilnym jeszcze stopka jest w połowie strony, może być poprawione na koniec - jeśli nie chce współpracować to nie ma prawa istnieć~Maciek

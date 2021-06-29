@@ -1,0 +1,8 @@
+RewriteEngine On
+RewriteRule ^([a-zA-Z0-9-_]+)$ index.php?page=$1 [NC,L,QSA]
+
+RewriteRule forum\/add index.php?page=forum&add=1 [NC,L,QSA]
+RewriteRule ^([a-zA-Z0-9\-\_]+)\/edit\/([0-9]+)$ index.php?page=$1&edit=$2 [NC,L,QSA]
+RewriteRule ^([a-zA-Z0-9-_]+)/delete/([0-9]+)$ index.php?page=$1&delete=$2 [NC,L,QSA]
+RewriteRule profile/([0-9]+)$ index.php?page=profile&profile=$1 [NC,L,QSA]
+

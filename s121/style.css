@@ -1,0 +1,523 @@
+*{
+	margin:0;
+	padding:0;
+	font-family: "Akaya kanadaka", sans-serif;
+}
+html,body{
+	height: 100%;
+}
+.header
+{
+	height: 100vh;
+	
+}
+body{
+	background-color: #2e222f !important;
+}
+.navbar-style {
+	box-shadow: 0 5px 10px black;
+	text-transform: uppercase;
+	background-color: #3e3546;
+}
+.logo
+{
+	height: 48px;
+	padding: 2px 10px;
+}
+.icon-bar
+{
+	background: #7f708a;
+}
+li a
+{
+	color: #7f708a !important;
+	font-size: 20px;
+}
+.big-text
+{
+	font-size: 80px;
+	margin: 20px 0;
+	color: #7f708a;
+	text-align: center;
+	
+}
+a.btn
+{
+	margin: 30px 10px;
+	width: 200px;
+	padding: 10px;
+	border-radius: 20px;
+}
+a.btn-first
+{
+	background-color: #694f62;
+	color: #fff;
+}
+a.btn-second
+{
+	background: transparent;
+	border: 1px solid darkorange;
+	color: black;
+}
+a.btn:hover{
+	background: #694f62;
+	border: none;
+	color: #fff;
+	box-shadow: 5px 5px 10px #999;
+	transition: 0.3s;
+}
+.banner-info, .banner-image{
+	margin: 10px 0;
+}
+
+.footer {
+	position: absolute;
+	bottom: 0;   /*przez to footerowi odwala gdy się zmniejszy ekran-Maciek*/
+	width: 100%;
+	height: 30px;
+	line-height: 30px;
+	background-color: #3e3546;
+	color: #694f62;
+	box-shadow: 10px 5px 10px black;
+	margin: 0 auto -60px;/**/
+}
+
+
+#micon ul li:hover {background-color: #000000;}
+
+.card-text{
+	background-color: #694f62;
+	color: #2e222f;
+	margin: 10px;
+	box-shadow: 5px 5px 10px #999;
+
+}
+
+#description {
+	font-size: 20px;
+	color: white;
+	padding-left: 10px;
+	padding-right: 10px;
+	text-align: justify;
+
+}
+#greeting{
+	color: white;
+	text-align: center;
+}
+
+#content, .col-sm-4{
+	height: 100%;
+	/* background-color: #3e3546 !important; /* potencjalnie kolor zmienić :V*/
+	background-color: #2e222f !important;
+}
+
+.card{
+	border-color: black;
+	background-color: #3e3546;
+	color: white;
+	margin-bottom: 5px;
+	/*border: 2px solid;*/
+
+
+}
+
+.card-body{
+	margin-bottom: 40px;
+}
+
+.avatar{
+	width: 50px;
+	height: 50px;
+}
+
+.col-sm-4{
+	height: 100%;
+	/* background-color: #3e3546 !important; /* potencjalnie kolor zmienić :V*/
+	background-color: #2e222f !important;
+	width: 90%;
+}
+
+.profile-link{
+	font-style: normal;
+	color:  #694f62;
+	font-size: 28px;
+}
+
+.friend-info{
+	height: 60px;
+	border: solid;
+}
+
+.img-fluid{
+	align-content: center;
+	alignment: center;
+	text-align: center;
+	max-width:100%;
+	max-height:100%;
+	display: block; /* ta linijka i 2 dalesze odpowiadają za wyśrodkowanie obrazkow :V */
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#login-button{
+	width: 200px;
+	padding: 10px;
+	border-radius: 20px;
+}
+
+.box {
+	width: 100%;
+	padding: 40px;
+	position: center;
+	text-align: center;
+	transition: 0.25s;
+}
+
+.box input[type="text"],
+.box input[type="password"] {
+	border: 0;
+	background: none;
+	margin: 20px auto;
+	text-align: center;
+	border: 2px solid #45293f;
+	padding: 10px 10px;
+	max-width: 250px;
+	width: 100%;
+	outline: none;
+	color: white;
+	border-radius: 24px;
+	transition: 0.25s
+}
+
+.box h1 {
+	color: white;
+	text-transform: uppercase;
+	font-weight: 500
+}
+
+.box input[type="text"]:focus,
+.box input[type="password"]:focus {
+	max-width: 300px;
+	border-color: #694f62
+}
+
+.box input[type="submit"] {
+	border: 0;
+	background: none;
+	margin: 20px auto;
+	text-align: center;
+	border: 2px solid #694f62;
+	padding: 14px 40px;
+	outline: none;
+	color: white;
+	border-radius: 24px;
+	transition: 0.25s;
+	cursor: pointer;
+	font-size: 16px;
+}
+
+.box input[type="submit"]:hover {
+	background: #694f62
+}
+
+.profile-link:hover{
+	font-style: normal;
+	color:  white;
+	font-size: 28px;
+	text-decoration: none;
+	text-shadow: 2px 2px gray;
+}
+
+#login-div{
+	align: "center" !important;
+}
+
+ul.nav a:hover {
+	background-color: #2e222f !important;
+}
+
+.dropdown-toggle, .dropdown-menu{
+	background-color: #3e3546 !important;
+}
+
+/*.row div{
+	margin-left: 15px;
+	margin-right: 15px;
+}*/
+
+.description, .active-users{
+	background-color: #3e3546 !important;
+
+}
+.active-users h1{
+	margin-top: 0;
+}
+
+#content > *{
+	background-color: #3e3546 !important;
+
+}
+#login-div > *{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+/*
+.flex {
+	display: flex;
+	flex-flow: column;
+}*/
+
+/*#inner_remaining{
+
+	height: 30px;
+}
+
+*/
+
+.form-check-label{
+	color: #694f62;
+	font-size: 16px;
+}
+
+.g-recaptcha {
+	display: inline-block;
+	size: auto;
+}
+#messages {
+	height: 80vh;
+	overflow-x: hidden;
+	padding: 10px;
+}
+#message {
+	flex: 2;
+	font-size: 2rem;
+
+}
+#message_send{
+	flex: 0.25;
+	font-size: 1.2rem;
+	padding: 10px;
+	margin: 10px 5px;
+	appearance: none;
+	-webkit-appearance: none;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+
+}
+
+#headerforum{
+	font-size: 50pt;
+	alignment: center;
+	color: white;
+	width: 100%;
+}
+
+
+#article-content{
+	width: 100%;
+}
+
+input[type=submit] {
+	background-color: #694f62;
+	color: #fff;
+	width: max-content;
+	padding: 5px;
+	border-radius: 20px;
+}
+
+input[type=submit]:hover{
+	background: #694f62;
+	border: none;
+	color: #fff;
+	box-shadow: 5px 5px 10px #999;
+	transition: 0.3s;
+}
+
+button.btn
+{
+	width: 200px;
+	padding: 10px;
+	border-radius: 20px;
+	position: center;
+}
+button.btn-first
+{
+	background-color: #694f62;
+	color: #fff;
+	alignment: center !important;
+}
+
+.card-header{
+	color: white;
+	font-size: 30pt;
+	text-align: center;
+	word-wrap: break-word;
+}
+
+#forum-content{
+	color: darkgrey; !important;
+	margin-left: 10px; !important;
+	margin-right: 10px;!important;
+	word-break: break-word;
+	font-size: 15pt;
+	text-align: justify;
+}
+
+#forum-author{
+	color: #2e222f;
+	font-size: 15pt;
+}
+
+#main-greeting{
+	color: white;
+	font-size: 30pt;
+	text-align: center;
+}
+
+#main-desc{
+	color: white;
+	text-align: justify;
+}
+#profile-username{
+	color: white;
+	font-size: 23pt;
+	text-align: center;
+	alignment: top;
+}
+
+#profile-avatar{
+	width: 120px;
+	height: 120px;
+	margin-right: 10px;
+}
+
+#profile-page{
+	height: 100%;
+}
+
+.profile-label{
+	color: white;
+	font-size: 15px;
+}
+
+.progress-label{
+	float: left;
+	margin-right: 1em;
+	color: white;
+	font-size: 15px;
+}
+
+.progress-bar{
+	background-color: #928192;
+	color: #3e3546;
+}
+
+.profile-info{
+	margin-left: 10pt;
+}
+
+.profile-about{
+	color: white;
+	font-size: 15px;
+	text-align: justify;
+	margin-right: 10px;
+	margin-bottom: 20px;
+}
+
+.progress{
+	width: 100%;
+}
+
+#header-settings{
+	font-size: 50pt;
+	text-align: center;
+	color: white;
+	width: auto;
+}
+
+.label-text{
+	font-size: 18pt;
+	color: white;
+}
+
+.form-group{
+
+	margin: 30px 10px;
+}
+
+#textedit{
+	width: 100%;
+}
+
+#game{
+	margin: auto;
+	width: 60%;
+
+	padding: 50px;
+	margin-top: 75px;
+}
+
+#game_text{
+	margin: auto;
+	font-size: 25pt;
+
+	color: white;
+}
+
+.button-center{
+	text-align: center;
+}
+
+#weapon1 img {
+	display: block;
+	height: 130px;
+	width: 160px;
+}
+#weapon2 img {
+	display: block;
+	height: 130px;
+	width: 160px;
+}
+#shield1 img {
+	display: block;
+	height: 130px;
+	width: 160px;
+}
+#shield2 img {
+	display: block;
+	height: 130px;
+	width: 160px;
+}
+#potion1 img {
+	display: block;
+	height: 130px;
+	width: 160px;
+}
+#potion2 img {
+	display: block;
+	height: 130px;
+	width: 160px;
+}
+
+#messages {
+	font-size: 30px;
+	color: azure;
+}
+.user-msg {
+	color: crimson;
+}
+
+.progress{
+	margin-top: 10px;
+	margin-bottom: 10px;
+
+}
+.name-div{
+	color: white;
+}
+.dialogue-div{
+	color: white;
+}

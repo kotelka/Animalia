@@ -1,0 +1,25 @@
+{% extends "index.twig" %}
+
+{% block content %}
+<div class="container">
+	<div class="row">
+		<div class="col-sm-6 banner-info">
+			<h1 id="main-greeting">Już jest!</h1>
+			<p class="big-text">Animalia</p>
+			<p id="main-desc">Nowa gra przeglądarkowa dla miłośników kotów, psów i spędzania całych dni przed ekranem komputera w ciemnym pokoju.
+			Walcz, zdobywaj pieniążki i nie daj się pokonać! W czasie wolnym poznaj innych graczy na czacie lub przeczytaj nowe posty na forum. Niech kocimiętka będzie z tobą!</p>
+			{% if id is defined %}
+			<a class="btn btn-first" href="/game">Zagraj</a>
+			<a class="btn btn-first" href="/forum">Sprawdź co nowego</a>
+			{% else %}
+			<a class="btn btn-first" href="/login">Zaloguj się</a>
+			<a class="btn btn-first" href="/register">Utwórz nowe konto</a>
+			{% endif %}
+		</div>
+		<div class="col-sm-6 banner-image">
+			<img src="res/main_pic.png" class="img-responsive" />
+		</div>
+	</div>
+
+</div>
+{% endblock content %}

@@ -1,0 +1,141 @@
+{% extends "index.twig" %}
+{% block content %}
+    <div class="container">
+        {% if add is defined and id is defined %}
+            <h1 id="headerforum">Utwórz post</h1>
+            <form action="/forum" method="POST">
+                <textarea name="tytul" style="min-width: 100%" placeholder="Tytuł posta" required></textarea>
+                </br>
+                <textarea name="tresc" id="article-content" style="height: 300px" placeholder="Treść posta"></textarea>
+                </br>
+                <input type="submit" id="submit-button" value="Dodaj">
+            </form>
+        {% elseif edit is defined and id is defined %}
+            <h1 id="headerforum">Edytuj post</h1>
+            <form action="/forum" method="POST">
+                <input type="hidden" value="{{ editpost['id'] }}" name="id">
+                <textarea name="title" style="min-width: 100%" placeholder="Tytuł artykułu" required>{{ editpost['title'] }}</textarea>
+                </br>
+                <textarea name="content" class="art-editor" id="article-content" style="height: 300px">{{ editpost['content'] }}</textarea>
+                </br>
+                <input type="submit" id="submit-button" value="Zapisz">
+            </form>
+
+        {% else %}
+        <div class="row">
+            <div class="col-md-8">
+                <img class="img-fluid" src="res/forum.png">
+                {% for post in forum %}
+                    <!--<h2>post</h2>-->
+                    <div class="card mb-3">
+                        <div class="card-header">
+                            {{ post['title'] }}
+                            <p id="forum-author">Autor: {{ post['user'] }}</p>
+                        </div>
+                        <div class="card-body" id="forum-content">
+                            {{ post['content'] }}
+                        </div>
+                        {% if id == post['user_id'] %}
+                            <div class="button-center">
+                                <a href="/forum/delete/{{ post['id'] }}">
+                                    <button class="btn btn-first">Usuń post</button>
+                                </a>
+                                <a href="/forum/edit/{{ post['id'] }}">
+                                    <button class="btn btn-first">Edytuj post</button>
+                                </a>
+                            </div>
+
+
+                        {% endif %}
+                    </div>
+                {% endfor %}
+            </div>
+            <div class="col-md-4">
+                {% if id is defined %}
+                <div class="button-center">
+                    <a href="/forum/add" class="column-header">
+                        <button class="btn btn-first">Dodaj post</button>
+                    </a>
+                </div>
+                {% else %}
+                    <h2>Zaloguj się by dodawać posty</h2>
+                {% endif %}
+                <div class="active-users">
+                    <h1 id="greeting">Aktywni użytkownicy:</h1>
+                    <div class="friend-list">
+                        {% for user in users %}
+                            <div class="friend-card">
+                                <div class="card-info">
+                                    <div class="friend-info">
+                                        {% if user['avatar'] != "" %}
+                                            <a href="profile/{{ user['id'] }}" class="pull-right text-green" ><img class="avatar" src="data:image/png;base64, {{ user['avatar'] }}"></a>
+                                        {% else %}
+                                            <a href="profile/{{ user['id'] }}" class="pull-right text-green"><img class="avatar" src="https://avatarfiles.alphacoders.com/414/41477.jpg"></a>
+                                        {% endif %}
+                                        <h5><a href="profile/{{ user['id'] }}" class="profile-link">{{ user['username'] }}</a></h5>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endfor %}
+                        <!--
+                        <div class="friend-card">
+                            <div class="card-info">
+                                <div class="friend-info">
+                                    <a href="#" class="pull-right text-green"><img class="avatar" src="https://avatarfiles.alphacoders.com/414/41477.jpg"></a>
+                                    <h5><a href="timeline.html" class="profile-link">Sophia Lee</a></h5>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="friend-card">
+                            <div class="card-info">
+                                <div class="friend-info">
+                                    <a href="#" class="pull-right text-green"><img class="avatar" src="https://avatarfiles.alphacoders.com/414/41477.jpg"></a>
+                                    <h5><a href="timeline.html" class="profile-link">Sophia Lee</a></h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="friend-card">
+                            <div class="card-info">
+                                <div class="friend-info">
+                                    <a href="#" class="pull-right text-green"><img class="avatar" src="https://avatarfiles.alphacoders.com/414/41477.jpg"></a>
+                                    <h5><a href="timeline.html" class="profile-link">Sophia Lee</a></h5>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="friend-card">
+                            <div class="card-info">
+                                <div class="friend-info">
+                                    <a href="#" class="pull-right text-green"><img class="avatar" src="https://avatarfiles.alphacoders.com/414/41477.jpg"></a>
+                                    <h5><a href="timeline.html" class="profile-link">Sophia Lee</a></h5>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="friend-card">
+                            <div class="card-info">
+                                <div class="friend-info">
+                                    <a href="#" class="pull-right text-green"><img class="avatar" src="https://avatarfiles.alphacoders.com/414/41477.jpg"></a>
+                                    <h5><a href="timeline.html" class="profile-link">Sophia Lee</a></h5>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="friend-card">
+                            <div class="card-info">
+                                <div class="friend-info">
+                                    <a href="#" class="pull-right text-green"><img class="avatar" src="https://avatarfiles.alphacoders.com/414/41477.jpg"></a>
+                                    <h5><a href="timeline.html" class="profile-link">Sophia Lee</a></h5>
+                                </div>
+                            </div>
+                        </div>
+                        -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {% endif %}
+    </div>
+{% endblock %}

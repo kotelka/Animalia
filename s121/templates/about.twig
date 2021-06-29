@@ -1,0 +1,131 @@
+{% extends "index.twig" %}
+{% block content %}
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-8" id="content">
+				<div class="content">
+				<!-- Content -->
+				<img class="img-fluid" src="res/about.png">
+				<div class="description" >
+					<h1 id="greeting">Witaj, przybyszu!</h1>
+					<p id="description">Wojna Kotów z Psami toczyła się przez wiele lat. W czasie jej trwania miały miejsce niezliczone bitwy. Nad płotem przeleciały setki tysięcy, być może miliony kości i ości wymierzonych w wrogie zwierzęta. Wielu poległo, jeszcze więcej uległo trwałemu zasmrodzeniu od śmieci. Niejeden Kot nadal wyciąga ze swojego futerka odłamki kości. Jednak walka była nierówna. Chociaż na początku obie strony szły pyszczek w pyszczek, po czasie Psy wyszły na prowadzenie. Ich siła,
+						ostry zapach i niewielki intelekt sprawiły, że stały się maszynami do miotania odpadami. Koty, chociaż w trakcie walki porzuciły swoje uwielbienie czystości, pozostawały mniej przystosowane genetycznie do tego typu walki. Po przegranych bitwach, gdy tylko nadarzyła się ku temu okazja, Koty wzięły łapki za pas i odleciały na planetę Wielkiej Włóczki aby w oparach kocimiętki szykować zagładę rasy Psów. Okazało się, że z całej rasy Kotów, na Ziemi pozostał tylko jeden - Kot. Poprzysiągł on zemstę za wszystkie poległe w czasie wojny Kotki i Kocięta.
+					</p>
+					<p id="description">Gdy został już sam, Kot otrzepał się z resztek kości i zaczął obmyślać jak zgładzić wrogów. Przez myśl mu przychodziły najpodlejsze, najobrzydliwsze
+					metody skrzywdzenia Psów. Już czuł w powietrzu smród zgniłych rybek. I wtedy nagle Kot opamiętał się - przecież jego gatunek słynął z czystości i puszystości!
+					Lata wojny z Psami spowodowały, że Koty zatraciły swoją elegancję i delikatność. Postanowił więc pokonać jeszcze jednego wroga - śmieci i towarzyszący im swąd.</p>
+					<p id="description">
+						Teraz to Ty, przybyszu, musisz pomóc Kotu pokonać złowrogie Psy i ich Szczenięta. Czeka cię daleka droga do zwycięstwa, w trakcie której zaznasz smaku śmieciowej
+						porażki. Nie zrażaj się! Po deszczu w końcu zawsze wychodzi słońce. Tylko że tu deszcz pachnie odpadami i ma kształt odłamków kości. Ale poradzisz sobie!
+						Nadzieja na stworzenie świata przyjaznego dla Kotów leży w twoich łapkach ekhm, rękach!
+					</p>
+					<p id="description"> </p>
+				</div>
+
+				<!--<div class="card border border-dark">
+					<img class="card-img-top text:center shadow" src="res/about.png" alt="Card image cap">
+					<div class="card-body">
+						<h3 class="card-title">Witaj, przybyszu!</h3>
+						<p class="card-text text-justify" id="description">Wojna Kotów z Psami toczyła się przez wiele lat. W czasie jej trwania miały miejsce niezliczone bitwy. Nad płotem przeleciały setki tysięcy, być może miliony kości i ości wymierzonych w wrogie zwierzęta. Wielu poległo, jeszcze więcej uległo trwałemu zasmrodzeniu od śmieci. Niejeden Kot nadal wyciąga ze swojego futerka odłamki kości. Jednak walka była nierówna. Chociaż na początku obie strony szły pyszczek w pyszczek, po czasie Psy wyszły na prowadzenie. Ich siła,
+							ostry zapach i niewielki intelekt sprawiły, że stały się maszynami do miotania odpadami. Koty, chociaż w trakcie walki porzuciły swoje uwielbienie czystości, pozostawały mniej przystosowane genetycznie do tego typu walki. Po przegranych bitwach, gdy tylko nadarzyła się ku temu okazja, Koty wzięły łapki za pas i odleciały na planetę Wielkiej Włóczki aby w oparach kocimiętki szykować zagładę rasy Psów. Okazało się, że z całej rasy Kotów, na Ziemi pozostał tylko jeden - Kot. Poprzysiągł on zemstę za wszystkie poległe w czasie wojny Kotki i Kocięta.
+						</p>
+						<p class="card-text text-justify" id="description">
+							Teraz to Ty, przybyszu, musisz pomóc Kotu pokonać złowrogie Psy i ich Szczenięta. Czeka cię daleka droga do zwycięstwa, w trakcie której zaznasz smaku śmieciowej porażki. Nie zrażaj się! Po deszczu w końcu zawsze wychodzi słońce. Tylko że tu deszcz pachnie odpadami i ma kształt odłamków kości. Ale poradzisz sobie! Nadzieja na stworzenie świata przyjaznego dla Kotów leży w twoich łapkach ekhm, rękach!
+						</p>
+					</div>
+				</div>
+				<a class="btn btn-first" href="#">Tu będzie link do gry</a>
+				<a class="btn btn-second" href="#">Tu będzie link do aktualności</a>
+			</div>
+			<div class="col-sm-4 banner-image">-->
+				</div>
+
+			</div>
+			<!--<div class="col-sm-4" id="cards">
+				<div class="card">
+					<div class="card-body">
+						<h3 class="card-title">Aktywni użytkownicy:</h3>
+						<p class="card-text text-justify">Użytkownik 1</p>
+						<p class="card-text text-justify">Użytkownik 2</p>
+						<p class="card-text text-justify">Użytkownik 3</p>
+					</div>
+			</div>-->
+			<!--
+			<div class="active-users">
+				<div class="row">
+					<div class="col-sm-4">
+					-->
+			<div class="col-sm-4">
+				<!--<div class="row">-->
+					<div class="active-users">
+						<h1 id="greeting">Aktywni użytkownicy:</h1>
+						<div class="friend-list">
+							{% for user in users %}
+								<div class="friend-card">
+									<div class="card-info">
+										<div class="friend-info">
+											{% if user['avatar'] != "" %}
+												<a href="profile/{{ user['id'] }}" class="pull-right text-green" ><img class="avatar" src="data:image/png;base64, {{ user['avatar'] }}"></a>
+											{% else %}
+												<a href="profile/{{ user['id'] }}" class="pull-right text-green"><img class="avatar" src="https://avatarfiles.alphacoders.com/414/41477.jpg"></a>
+											{% endif %}
+											<h5><a href="profile/{{ user['id'] }}" class="profile-link">{{ user['username'] }}</a></h5>
+										</div>
+									</div>
+								</div>
+							{% endfor %}
+<!--
+								<div class="friend-card">
+									<div class="card-info">
+										<div class="friend-info">
+											<a href="#" class="pull-right text-green"><img class="avatar" src="https://avatarfiles.alphacoders.com/414/41477.jpg"></a>
+											<h5><a href="timeline.html" class="profile-link">Sophia Lee</a></h5>
+										</div>
+									</div>
+								</div>
+								<div class="friend-card">
+									<div class="card-info">
+										<div class="friend-info">
+											<a href="#" class="pull-right text-green"><img class="avatar" src="https://avatarfiles.alphacoders.com/414/41477.jpg"></a>
+											<h5><a href="timeline.html" class="profile-link">Sophia Lee</a></h5>
+										</div>
+									</div>
+								</div>
+
+								<div class="friend-card">
+									<div class="card-info">
+										<div class="friend-info">
+											<a href="#" class="pull-right text-green"><img class="avatar" src="https://avatarfiles.alphacoders.com/414/41477.jpg"></a>
+											<h5><a href="timeline.html" class="profile-link">Sophia Lee</a></h5>
+										</div>
+									</div>
+								</div>
+
+								<div class="friend-card">
+									<div class="card-info">
+										<div class="friend-info">
+											<a href="#" class="pull-right text-green"><img class="avatar" src="https://avatarfiles.alphacoders.com/414/41477.jpg"></a>
+											<h5><a href="timeline.html" class="profile-link">Sophia Lee</a></h5>
+										</div>
+									</div>
+								</div>
+
+								<div class="friend-card">
+									<div class="card-info">
+										<div class="friend-info">
+											<a href="#" class="pull-right text-green"><img class="avatar" src="https://avatarfiles.alphacoders.com/414/41477.jpg"></a>
+											<h5><a href="timeline.html" class="profile-link">Sophia Lee</a></h5>
+										</div>
+									</div>
+								</div>
+								-->
+						</div>
+					</div>
+				<!--</div>-->
+				<div>
+					<a href="https://info.flagcounter.com/nNHF"><img src="https://s04.flagcounter.com/count2/nNHF/bg_694f62/txt_000000/border_CCCCCC/columns_2/maxflags_10/viewers_0/labels_0/pageviews_0/flags_0/percent_0/" alt="Flag Counter" border="0"></a>				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+{% endblock %}

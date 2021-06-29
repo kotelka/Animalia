@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="f4e05653-c732-4ede-aa16-d659f034bab7" name="www" url="http://labagh.pl">
+        <fileTransfer rootFolder="/home/s121" accessType="SFTP" host="labagh.pl" port="22" sshConfigId="d808e3e5-3540-41d8-8c68-73beff77133a" sshConfig="s121@labagh.pl:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
