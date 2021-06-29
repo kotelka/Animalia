@@ -17,3 +17,4 @@ Zrzuty ekranu:
 
 
 
+tu turu tu tu tu tu tu tu tu tutururururururururu 
